@@ -1,4 +1,32 @@
 # Client Task C #
-# Add your pseudocode to this file below this line: #
+ 
+ 
+ # Add your pseudocode to this file below this line: #
+
 # ------------------------------------------------- #
 
+// Danny Miracle //
+// Code KY //
+// C# Pseudocode Example // 
+
+START Program
+
+    // Define the starting and ending values
+    DEFINE startValue AS 2
+    DEFINE endValue AS 50
+    DEFINE increment AS 2
+    
+    // Initialize a variable to hold the current value
+    DEFINE currentValue AS startValue
+
+    // Print the range for clarity
+    PRINT "Counting products scanned in packages (counting by twos):"
+
+    // Loop to print numbers from 2 to 50, counting by 2
+    WHILE currentValue <= endValue DO
+        PRINT currentValue
+        // Increment the currentValue by 2
+        currentValue = currentValue + increment
+    END WHILE
+
+END Program

@@ -1,4 +1,75 @@
-# Client Task B #
+# Client Task B # 
+
+
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+// Danny Miracle //
+// Code KY //
+// C# Pseudocode Example //
+
+// Define the warehouse dimensions
+const int WAREHOUSE_WIDTH = 10
+const int WAREHOUSE_HEIGHT = 10
+
+// Initialize the warehouse grid
+Create 2D array warehouse[WAREHOUSE_WIDTH][WAREHOUSE_HEIGHT]
+
+// Specify starting and target locations
+int startX, startY
+int targetX, targetY
+
+// Input starting position from user
+Output "Enter starting position (X Y): "
+Input startX, startY
+
+// Input target location from user
+Output "Enter target position (X Y): "
+Input targetX, targetY
+
+// Validate input positions
+If (startX < 0 OR startX >= WAREHOUSE_WIDTH OR startY < 0 OR startY >= WAREHOUSE_HEIGHT) THEN 
+    Output "Invalid starting position. Please enter valid coordinates."
+    Exit
+END IF
+
+If (targetX < 0 OR targetX >= WAREHOUSE_WIDTH OR targetY < 0 OR targetY >= WAREHOUSE_HEIGHT) THEN 
+    Output "Invalid target position. Please enter valid coordinates."
+    Exit
+END IF
+
+// Initialize current position
+int currentX = startX
+int currentY = startY
+
+// Loop until the current position matches the target position
+WHILE (currentX != targetX OR currentY != targetY) DO
+
+    // Calculate the difference in position
+    int deltaX = targetX - currentX
+    int deltaY = targetY - currentY
+
+    // Determine direction to move
+    IF (deltaX > 0) THEN
+        Output "Move EAST"
+        currentX = currentX + 1
+    ELSE IF (deltaX < 0) THEN
+        Output "Move WEST"
+        currentX = currentX - 1
+    END IF
+
+    IF (deltaY > 0) THEN
+        Output "Move NORTH"
+        currentY = currentY + 1
+    ELSE IF (deltaY < 0) THEN
+        Output "Move SOUTH"
+        currentY = currentY - 1
+    END IF
+
+    // Output current position
+    Output "Current position: (CURRENT_X, CURRENT_Y)"
+
+END WHILE
+
+// Output success message
+Output "You have reached the target location!"

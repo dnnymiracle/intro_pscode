@@ -1,4 +1,55 @@
 # Client Task A #
-# Add your pseudocode to this file below this line: #
+
+# Add your pseudocode 
+# Add your pseudocode to this file below this line:
+# ------------------------------------------------- #
+
+
+// Danny Miracle //
+// Code KY //
+// C# Pseudocode Example //
+
+    DEFINE random_number AS INTEGER
+    DEFINE user_guess AS INTEGER
+    DEFINE attempts AS INTEGER = 0
+    DEFINE max_attempts AS INTEGER = 3
+
+    // Step 2: Generate a random number between 1 and 10
+    SET random_number = RandomNumber(1, 10)
+    
+    // Step 3: Print instructions for the user
+    PRINT "Welcome to the Number Guessing Game!"
+    PRINT "I have selected a number between 1 and 10."
+    PRINT "You have 3 attempts to guess it."
+
+    // Step 4: Game loop for 3 attempts
+    WHILE attempts < max_attempts DO
+        // Step 5: Get user input
+        PRINT "Enter your guess:"
+        READ user_guess
+        
+        // Step 6: Check the user's guess
+        IF user_guess = random_number THEN
+            PRINT "Congratulations! You guessed the number."
+            BREAK // Exit the loop if the guess is correct
+        ELSE
+            PRINT "Incorrect guess."
+            INCREMENT attempts
+            // Step 7: Provide feedback based on the remaining attempts
+            IF attempts < max_attempts THEN
+                PRINT "You have " + (max_attempts - attempts) + " attempts left."
+            ENDIF
+        ENDIF
+    ENDWHILE
+
+    // Step 8: Check if user has run out of attempts
+    IF attempts = max_attempts THEN
+        PRINT "Sorry! You've used all your attempts."
+        PRINT "The correct number was " + random_number + "."
+    ENDIF
+
+    PRINT "Thank you for playing!"
+
+END NumberGuessingGame
 # ------------------------------------------------- #
 
